@@ -1,9 +1,6 @@
-import { Application } from "https://deno.land/x/oak@v3.0.0/mod.ts";
-
-const app = new Application();
-
-app.use((ctx) => {
-  ctx.response.body = "Hello World 2nd attempt!";
-});
-
-await app.listen({ port: 8000 });
+import { serve } from "https://deno.land/std/http/server.ts";
+serve((req) =>
+  new Response("Hello World!", {
+    headers: { "content-type": "text/plain" },
+  })
+);
