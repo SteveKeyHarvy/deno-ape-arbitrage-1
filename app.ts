@@ -19,6 +19,6 @@ app
     .post('/create_order',create_order)
 
 // listen to port
-app.start({ port: 8080 });
+app.start();
 
 console.log('server is running!')
